@@ -26,58 +26,77 @@ export default function Home() {
         </h1>
 
         <div className='grid'>
-          <a href="/project:1" className='card'>
+          <Link href="/project:1" className='card'>
             <Image src="/peacock_wh.png" alt="page logo" width={32} height={32}/>
             <div>
             <h2>Tezos{"'"} Tumbler</h2>
             <p>Building a decentralized app enhancing privacy on the Tezos network thanks to zk-SNARK</p>
             </div>
-          </a>
-          <a href="/project:2" className='card'>
+          </Link>
+          <Link href="/project:2" className='card'>
             <div>
             <h2>Mini Dall-e</h2>
             <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
             </div>
-          </a>
-          <a href="/project:2" className='card'>
+          </Link>
+          <Link href="/project:2" className='card'>
             <div>
             <h2>Mini Dall-e</h2>
             <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
             </div>
-          </a>
-          <a href="/project:2" className='card'>
+          </Link>
+          <Link href="/project:2" className='card'>
             <div>
             <h2>Mini Dall-e</h2>
             <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
             </div>
-          </a>
-          <a href="/project:2" className='card'>
+          </Link>
+          <Link href="/project:2" className='card'>
             <div>
             <h2>Mini Dall-e</h2>
             <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
             </div>
-          </a>
-          <a href="/project:2" className='card'>
-            <div>
-            <h2>Mini Dall-e</h2>
-            <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
-            </div>
-          </a><a href="/project:2" className='card'>
-            <div>
-            <h2>Mini Dall-e</h2>
-            <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
-            </div>
-          </a><a href="/project:2" className='card'>
-            <div>
-            <h2>Mini Dall-e</h2>
-            <p>Creating and training a GAN model coupled with an NLP Clip model to generate images from texts</p>
-            </div>
-          </a>
+          </Link>
+          <Link href="/projects" className='card last'>
+            <p>See more</p>
+            <span>→</span>
+          </Link>
+
         </div>
 
         <h1>
           <Link href="/writtings">Writtings</Link>
         </h1>
+
+        <ul className='list'>
+          <li>
+            <Link href="/writting:1">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+            <Link  href="/writting:2">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+            <Link  href="/writting:2">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+          <Link  href="/writtings">
+            <h3>See more</h3>
+            <span>→</span>
+            </Link>
+            </li>
+        </ul>
        </>
   )
 }

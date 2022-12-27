@@ -3,8 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Header() {
+  const dark="html,body{--html-color-scheme:dark;--body-color:white;--body-background:rgb(20, 18, 22);--header-background-color:rgb(20, 18, 22);--menu_open-background-color:rgb(20, 18, 22);--module-span-background-color:white;--module_open-span-background-color:white;--a-color:inherit;--p-a-color:rgb(225, 165, 180);--span-a-color:rgb(225, 165, 180);--card-border:0.1px solid white;--li-border-top:0.1px solid white;--li-a-time-color:rgb(225, 165, 180);--footer:0.1px solid white;--footer-a-color:rgb(225, 165, 180);}"
+  const light="html,body{--html-color-scheme:light;--body-color:black;--body-background:rgb(255, 253, 250);--header-background-color:rgb(255, 253, 250);--menu_open-background-color:rgb(255, 253, 250);--module-span-background-color:black;--module_open-span-background-color:black;--a-color:inherit;--p-a-color:rgb(165, 170, 225);--span-a-color:rgb(165, 170, 225);--card-border:0.1px solid black;--li-border-top:0.1px solid black;--li-a-time-color:rgb(165, 170, 225);--footer:0.1px solid black;--footer-a-color:rgb(165, 170, 225);}"
   const [theme,setTheme]=useState(false);
-  const [cssTheme,setCssTheme]=useState("html,body{--html-color-scheme:light;--body-color:black;--body-background:rgb(255, 253, 250);--a-color:inherit;--p-a-color:rgb(165, 170, 225);--card-border:0.1px solid black;--footer:0.1px solid black;}");
+  const [cssTheme,setCssTheme]=useState(light);
   const [menu,setMenu]=useState(false)
 
   useEffect(()=>{
@@ -20,10 +22,10 @@ export default function Header() {
 
   useEffect(()=>{
     if(theme){
-     setCssTheme("html,body{--html-color-scheme:dark;--body-color:white;--body-background:rgb(20, 18, 22);--header-background-color:rgb(20, 18, 22);--menu_open-background-color:rgb(20, 18, 22);--module-span-background-color:white;--module_open-span-background-color:white;--a-color:inherit;--p-a-color:rgb(225, 165, 180);--card-border:0.1px solid white;--footer:0.1px solid white;--footer-a-color:rgb(225, 165, 180);}")
+     setCssTheme(dark)
   
     }else{
-    setCssTheme("html,body{--html-color-scheme:light;--body-color:black;--body-background:rgb(255, 253, 250);--header-background-color:rgb(255, 253, 250);--menu_open-background-color:rgb(255, 253, 250);--module-span-background-color:black;--module_open-span-background-color:black;--a-color:inherit;--p-a-color:rgb(165, 170, 225);--card-border:0.1px solid black;--footer:0.1px solid black;--footer-a-color:rgb(165, 170, 225);}")
+    setCssTheme(light)
     }
   },[theme])
   

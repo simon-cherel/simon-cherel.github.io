@@ -80,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow:visible;
 }
 
 .header {
@@ -91,7 +92,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items : center;
-  
+  z-index: 1;
 }
 
 .homeButton{
@@ -271,7 +272,7 @@ body {
 h1{
   font-weight: 400;
   text-decoration: none;
-  margin: 0;
+  margin: 1rem 0rem;
   font-size: 1.2rem;
 }
 
@@ -284,7 +285,7 @@ p{
   text-decoration: none;
   font-size: 1rem;
   line-height: 1.7;
-  margin: 1rem 1rem;
+  margin: 0rem 1rem;
 }
 
 a {
@@ -295,46 +296,132 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap:nowrap;
+  justify-content:flex-start;
+  overflow-y: hidden;
   overflow-x: scroll;
-  justify-content: flex-start;
   align-items: center;
+  width: 110%;
+  height: 200px;
 }
 
 .card {
-  margin: 4px;
-  padding: 2px;
   text-align: center;
-  color: inherit;
   text-decoration: none;
   border-radius: 1.5px;
-  transition: max-width 0.15s ease;
+  min-width: 250px;
   width: 300px;
-  height: 200;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
 
 }
 
 .card img{
-  z-index: -1;
-  position:absolute;
-  width:fit-content;
-  height: fit-content;
+  opacity: 1;
+  min-height: 100%;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  width: 305px;
+.card img:hover,
+.card img:active,
+.card img:focus{
+  opacity: .2;
+  transition: opacity 0.5s ease;
 }
 
 .card div{
-  visibility: hidden;
+  margin: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 .card:hover div,
 .card:focus div,
 .card:active div{
-  visibility:visible;
- 
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.last{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.last span{
+  opacity:0;
+  transition: opacity 0.5s ease;
+}
+
+.last:hover span,
+.last:focus span,
+.last:active span{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.list{
+  width: 90%;
+  margin: 0rem 1rem;;
+  padding: 0rem 0rem;
+}
+
+li{
+  width: 100%;
+  margin: 0rem 0rem;
+  padding: 1rem 0rem;
+  list-style-type:none;
+}
+
+li a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li a h3{
+  margin: 0rem 0rem;
+  font-weight: normal;
+  font-size: medium;
+  display: inline-block;
+}
+
+li a p{
+  font-weight:normal;
+  font-size: small;
+}
+
+li a time{
+  font-weight: lighter;
+  font-size: small;
+}
+
+li a span{
+  opacity:0;
+  transition: opacity 0.5s ease;
+}
+
+li:hover a span,
+li:active a span,
+li:focus a span{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 footer {
@@ -350,52 +437,65 @@ footer {
 
 /* @media (prefers-color-scheme: dark) 
 @media (prefers-color-scheme: light) */
-  html {
-    color-scheme: var(--html-color-scheme);
-  }
-  body {
-    color: var(--body-color);
-    background: var(--body-background);
-  }
+html {
+  color-scheme: var(--html-color-scheme);
+}
+body {
+  color: var(--body-color);
+  background: var(--body-background);
+}
 
-  .header{
-    background-color: var(--header-background-color);
-  }
+.header{
+  background-color: var(--header-background-color);
+}
 
-  .menu_open{
-    background-color: var(--menu_open-background-color);
-  }
+.menu_open{
+  background-color: var(--menu_open-background-color);
+}
 
-  .module span{
-    background-color: var(--module-span-background-color);
-  }
+.module span{
+  background-color: var(--module-span-background-color);
+}
 
-  .module_open span{
-    background-color: var(--module_open-span-background-color);
-  }
+.module_open span{
+  background-color: var(--module_open-span-background-color);
+}
 
-  .subtitle {
-    font-style: italic;
-  }
+.subtitle {
+  font-style: italic;
+}
 
-  a{
-    color:var(--a-color);
-  }
-  p a{
-    color: var(--p-a-color);
-  }
+a{
+  color:var(--a-color);
+}
+p a{
+  color: var(--p-a-color);
+}
 
-  .card{
-    border: var(--card-border);
-  }
+span a{
+  color: var(--span-a-color);
+}
 
-  footer{
-    border-top:var(--footer);
-  }
 
-  footer a{
-    color: var(--footer-a-color)
-  }
+.card{
+  border: var(--card-border);
+}
+
+li{
+  border-top:var(--li-border-top);
+} 
+
+li a time{
+  color:var(--li-a-time-color)
+}
+
+footer{
+  border-top:var(--footer);
+}
+
+footer a{
+  color: var(--footer-a-color)
+}
 
   
 

@@ -1,36 +1,41 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useRef } from 'react'
-import {Mesh} from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
-
-function Cube(){
-  const meshRef= useRef<Mesh>(null);
-  useFrame(()=>{
-    if(!meshRef.current){
-      return;
-    }
-    meshRef.current.rotation.x+=0.01;
-    meshRef.current.rotation.y+=0.01;
-  });
-  return(
-    <mesh ref={meshRef}>
-          <boxGeometry/>
-          <meshStandardMaterial color="blue"/>
-    </mesh>
-  );
-}
+import Link from "next/link"
 
 export default function Writtings() {
   return (
     <>
-      <Canvas>
-        <ambientLight/>
-        <pointLight position={[10,10,10]}/>
-        <Cube/>
-          
-   
-      </Canvas>
+        <h1 >
+          Writtings
+        </h1>
+
+        <ul className='list'>
+          <li>
+            <Link href="/writting:1">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+            <Link  href="/writting:2">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+            <Link  href="/writting:2">
+            <h3>Tezos{"'"} Tumbler</h3>
+            <p>Building a decentralized app enhancing privacy on the Ethereum network thanks to zk-SNARK</p>
+            <time dateTime='2022-12-27'>27th december, 2022</time>
+            </Link>
+          </li>
+          <li>
+          <Link  href="/writtings">
+            <h3>See more</h3>
+            <span>→</span>
+            </Link>
+            </li>
+        </ul>
     </>
   )
 }
