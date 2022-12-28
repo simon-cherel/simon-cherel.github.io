@@ -8,7 +8,7 @@ export default function Layout({children}:{children:any}) {
     <Head>
         <title>Simon&apos;s portfolio</title> 
         <meta name="description" content="Simon CHEREL's portfolio" />
-        <link rel="icon" href="/peacock_wh.ico" />
+        <link rel="icon" href="./peacock_wh.png" />
       </Head>
     <Header/>
     <div className='container'>

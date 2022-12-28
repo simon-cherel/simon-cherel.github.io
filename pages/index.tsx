@@ -26,7 +26,7 @@ export default function Home() {
 
         <div className='grid'>
           <Link href="/project:1" className='card'>
-            <Image src="/peacock_wh.png" alt="page logo" width={32} height={32}/>
+            <Image src="./peacock_wh.png" alt="page logo" width={32} height={32}/>
             <div>
             <h2>Tezos{"'"} Tumbler</h2>
             <p>Building a decentralized app enhancing privacy on the Tezos network thanks to zk-SNARK</p>

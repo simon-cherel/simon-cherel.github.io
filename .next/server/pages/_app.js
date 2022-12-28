@@ -38,7 +38,7 @@ function Footer() {
             /*#__PURE__*/ jsx_runtime_.jsx("span", {
                 className: "logo",
                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: "/peacock_apple.png",
+                    src: "./peacock_apple.png",
                     alt: "Peacock Logo",
                     width: 32,
                     height: 32
@@ -103,7 +103,7 @@ function Header() {
                                 /*#__PURE__*/ jsx_runtime_.jsx("div", {
                                     className: "logo",
                                     children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                        src: "/peacock_wh.png",
+                                        src: "./peacock_wh.png",
                                         alt: "page logo",
                                         width: 32,
                                         height: 32
@@ -160,7 +160,7 @@ function Header() {
                                     setTheme(!theme);
                                 },
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                    src: theme ? "/sun.png" : "/moon.png",
+                                    src: theme ? "./sun.png" : "./moon.png",
                                     alt: "page logo",
                                     width: 32,
                                     height: 32
@@ -204,7 +204,7 @@ function Layout({ children  }) {
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("link", {
                         rel: "icon",
-                        href: "/peacock_wh.ico"
+                        href: "./peacock_wh.png"
                     })
                 ]
             }),
