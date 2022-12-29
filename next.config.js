@@ -4,10 +4,13 @@
 //   swcMinify: true,
 // }
 const nextConfig   = {
-  assetPrefix: './',
+  experimental: {
+    css: false,
+  },
   images: {
+    
     unoptimized: true,
   },
-};
+}
 
 module.exports = nextConfig
