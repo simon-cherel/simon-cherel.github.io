@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import {getStaticProps } from '../../comps/getProject'
+import {getPostData } from '../../comps/getProject'
 
 const Writting = () => {
   const router = useRouter();

@@ -1,38 +1,17 @@
-import { remark } from 'remark';
+import { remark} from 'remark';
 import html from 'remark-html';
-import * as fs from 'fs';
 import * as path from 'path';
-import matter from 'gray-matter';
 
 export async function getPostData(id:number) {
-    const fullPath = path.join("../thesaurus/projects", `project_${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-  
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-  
-    // Use remark to convert markdown into HTML string
+    const fullPath = path.join("../thesaurus/projects", "project_"+id.toString()+".md");
+    const fileContents = await fetch(fullPath);
+    const blobContents=await fileContents.blob()
+    const blobResponse= await blobContents.text()
+
     const processedContent = await remark()
       .use(html)
-      .process(matterResult.content);
+      .process(blobResponse);
     const contentHtml = processedContent.toString();
-  
-    // Combine the data with the id and contentHtml
-    return {
-      id,
-      contentHtml,
-      ...matterResult.data,
-    };
+    const result=contentHtml;
+    return result;
   }
-
-export  async function getStaticProps(id:any) {
-    // Add the "await" keyword like this:
-    const postData = await getPostData(id);
-  
-    return {
-      props: {
-        postData,
-      },
-    };
-  }
-  
