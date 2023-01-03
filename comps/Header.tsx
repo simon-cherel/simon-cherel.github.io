@@ -15,7 +15,6 @@ export default function Header() {
       // setTheme(userTheme)
     }
     fetchData();
-    console.log(theme)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 

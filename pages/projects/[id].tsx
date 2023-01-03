@@ -1,23 +1,21 @@
-import { stat } from 'fs';
 import { useRouter } from 'next/router'
 import { useState, useEffect} from 'react';
-import { resourceLimits } from 'worker_threads';
-import {getPostData } from '../../comps/getProject'
+import {getProject } from '../../comps/getMarkdown'
 
 const Project = () => {
   const [state, setState]=useState({})
   const router = useRouter();
-  const id = router.query.id? router.query.id.toString():'1';
+  const id = router.query.id? router.query.id.toString():'';
   useEffect(() => {
     const fetchData = async (id:number) => {
-      const result = getPostData(id);
+      const result = getProject(id);
+      console.log(await result);
       setState(await result);
     }
     fetchData(parseInt(id));
-  },[]);
+  },[id]);
   return (
     <>
-  <p>Project: {id}</p>
   <div dangerouslySetInnerHTML={{ __html: state.toString() }} />
     </>
     )
