@@ -2,14 +2,21 @@ const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
 
-async function main(callback_main) {
+function isEmpty(path) {
+  return fs.readdirSync(path).length === 0;
+}
+
+function main(callback_main) {
   const projects = fs.opendirSync("public/thesaurus/projects");
   const writtings = fs.opendirSync("public/thesaurus/writtings");
   let json = {};
 
-  async function run(callback_run, theme, theme_name) {
+    function run(callback_run, theme, theme_name) {
     let result = {};
     let item;
+    if (isEmpty("public/thesaurus/"+theme_name)){
+        callback_run(result);
+    }else{
     while ((item = theme.readSync()) !== null) {
       let description = "";
       let title = "";
@@ -17,7 +24,7 @@ async function main(callback_main) {
       let img = "";
       let _item = item;
       let numb;
-      const data_stream = await readline.createInterface({
+      const data_stream =readline.createInterface({
         input:
           theme_name == "projects"
             ? fs.createReadStream("public/thesaurus/projects/" + _item.name)
@@ -66,10 +73,10 @@ async function main(callback_main) {
         result[_item.name] = array;
         callback_run(result);
       });
-    }
+    }}
   }
   
-  
+
   run((result_projects) => {
     run((result_writtings) => {
         callback_main({"projects":result_projects,"writtings":result_writtings});
@@ -86,5 +93,5 @@ if (err) throw err;
 }
 
 main((json) => {
-writteFile(json)
+  writteFile(json)
 });

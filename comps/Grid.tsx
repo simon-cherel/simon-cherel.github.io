@@ -28,11 +28,22 @@ export default function Grid() {
   
   );
 
+  const EmptyCard = () => (
+    <Link href={"/projects"} className='card'>
+    <div>
+    <Image src={"/"+"./peacock_wh.png"} alt="peacock" width={32} height={32}/>
+    <h2>No projects</h2>
+    <p>Coming soon</p>
+    </div>
+    </Link>
+  
+  );
+
   return (
     <div className='grid'>
 
-{ state.projects?Object.keys(state?.projects).map((project,i) =>(
-                <Card key={i} project={state?.projects[project]}/>)):""}
+{ state.projects!==undefined?Object.keys(state.projects).length!==0?Object.keys(state?.projects).map((project,i) =>(
+                <Card key={i} project={state?.projects[project]}/>)):<EmptyCard/>:<EmptyCard/>}
 
          
           <Link href="/projects" className='card last'>
