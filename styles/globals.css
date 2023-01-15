@@ -276,6 +276,36 @@ h1{
   font-size: 1.2rem;
 }
 
+h2{
+  font-weight: 500;
+  text-decoration: none;
+  margin: 1rem 0rem;
+  font-size: 1.2rem;
+}
+
+h3{
+  font-weight: 600;
+  text-decoration: none;
+  margin: 1rem 0rem;
+  font-size: 1.2rem;
+}
+
+.wh1{
+  align-self: center;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 4rem 0rem;
+  font-size: 1.5rem;
+}
+
+.ph1{
+  align-self: center;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 4rem 0rem;
+  font-size: 1.5rem;
+}
+
 h1 a{
   text-decoration: none;
   font-size: 1.2rem;
@@ -290,6 +320,49 @@ p{
 
 a {
   text-decoration: none;
+}
+
+.articles{
+  
+  align-self: center;
+  width: 70%;
+}
+
+.articles h1{
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  margin-top: 0rem;
+  font-size: 2rem;
+}
+
+.articles h2{
+  font-weight: 400;
+  text-decoration: none;
+  margin: 2rem 0rem;
+  font-size: 1.5rem;
+}
+
+.articles h3{
+  font-weight: 400;
+  text-decoration: none;
+  margin: 2rem 0rem;
+  font-size: 1.2rem;
+}
+
+.articles p{
+  text-align:justify;
+  margin: 1rem 0rem;
+}
+
+.articles p em{
+  font-weight: 200;
+}
+
+.articles p img{
+  width: 40%;
+  margin: 0rem 30%;
+ 
 }
 
 .grid {
@@ -351,6 +424,103 @@ a {
   transition: opacity 0.5s ease;
 }
 
+@media (max-width: 750px) {
+  .pgrid {
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+} 
+
+@media (min-width: 750px) {
+  .pgrid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1050px) {
+
+  .pgrid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+} 
+
+@media (min-width: 1400px) {
+.pgrid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+
+.pgrid {
+  align-self: center;
+}
+
+.pgrid1 {
+  align-self: center;
+  display:grid;
+  grid-template-columns: 1fr;
+}
+.pgrid2 {
+  align-self: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pgrid3 {
+  align-self: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pcard {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1.5px;
+  min-width: 250px;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.pcard img{
+  opacity: 1;
+  min-height: 100%;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.pcard img:hover,
+.pcard img:active,
+.pcard img:focus{
+  opacity: .2;
+  transition: opacity 0.5s ease;
+}
+
+.pcard div{
+  margin: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.pcard:hover div,
+.pcard:focus div,
+.pcard:active div{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
 .last{
   display: flex;
   flex-direction: row;
@@ -365,6 +535,62 @@ a {
 .last:hover span,
 .last:focus span,
 .last:active span{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.writtinglist{
+  width: 100%;
+  margin: 0rem 0rem;;
+  padding: 0rem 0rem;
+}
+
+.wli{
+  width: 100%;
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+  list-style-type:none;
+  border-top:none;
+}
+
+.wli a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wli a h3{
+  margin: 1rem 0rem;
+  font-weight:500;
+  font-size:large;
+  display: inline-block;
+  text-align: center;
+  order: 2;
+}
+
+.wli a p{
+  font-weight:normal;
+  font-size: normal;
+  text-align: center;
+  order: 3;
+}
+
+.wli a time{
+  align-self:flex-end;
+  order: 1;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.wli a span{
+  opacity:0;
+  transition: opacity 0.5s ease;
+}
+
+.wli:hover a span,
+.wli:active a span,
+.wli:focus a span{
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -435,8 +661,8 @@ footer {
 }
 
 
-/* @media (prefers-color-scheme: dark) 
-@media (prefers-color-scheme: light) */
+
+
 html {
   color-scheme: var(--html-color-scheme);
 }
@@ -481,11 +707,19 @@ span a{
   border: var(--card-border);
 }
 
+.pcard{
+  border: var(--card-border);
+}
+
 li{
   border-top:var(--li-border-top);
 } 
 
 li a time{
+  color:var(--li-a-time-color)
+}
+
+.wli a time{
   color:var(--li-a-time-color)
 }
 

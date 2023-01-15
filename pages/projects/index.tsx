@@ -1,4 +1,4 @@
-import Grid from "@/comps/Grid"
+import ProjectGrid from "@/comps/ProjectGrid"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -6,11 +6,11 @@ import Link from "next/link"
 export default function Projects() {
   return (
     <>
-        <h1 >
+        <h1 className="ph1">
           Projects
         </h1>
 
-        <Grid/>
+        <ProjectGrid/>
     </>
   )
 }

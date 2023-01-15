@@ -18,7 +18,7 @@ export default function Grid() {
 
   const Card = (project:any) => (
     <Link href={"/projects/"+project.project.numb} className='card'>
-    <Image src={"/"+project.project.img} alt={project.project.title} width={32} height={32}/>
+    <Image src={project.project.img} alt={project.project.title} width={32} height={32}/>
     <div>
 
     <h2>{project.project.title}</h2>

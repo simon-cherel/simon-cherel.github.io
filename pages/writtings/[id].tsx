@@ -16,7 +16,7 @@ const Writting = () => {
   },[id]);
   return (
     <>
-  <div dangerouslySetInnerHTML={{ __html: state.toString() }} />
+  <div className="articles" dangerouslySetInnerHTML={{ __html: state.toString() }} />
     </>
     )
   
