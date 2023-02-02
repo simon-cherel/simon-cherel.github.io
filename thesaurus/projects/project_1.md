@@ -1,11 +1,10 @@
-# Tezo's Tumbler
+# Automated Foilboard
+*A way to surf foilboard without using a command thanks to unstable equilibrium dynamics.*
 
-![Tezo's Tumbler](project_1.jpg)
+February 2020
 
-[Github Repository](https://www.github.com/simon-cherel)
+The simple demo of a prototype is presente here : [Click here to see the demo of the prototype.](/project_1.mp4)
 
-2022-12-30
+![Embedded electronics](/project_1.jpg)
 
-*A new way to achieve anonymity on blockchains*
-
-A tumbler is a technology which permit transactions on blockchain to be obscured.
+See more detail later
