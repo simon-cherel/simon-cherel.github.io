@@ -10,7 +10,21 @@
 
 # next.js
 .next
+.next/
 .next/*
+.next/cache
+.next/cache/
+.next/cache/*
+.next/cache/webpack
+.next/cache/webpack/
+.next/cache/webpack/*
+.next/cache/webpack/client-development
+.next/cache/webpack/client-development/
+.next/cache/webpack/client-development/*
+.next/cache/webpack/server-development
+.next/cache/webpack/server-development/
+.next/cache/webpack/server-development/*
+
 # production
 out
 out/*
