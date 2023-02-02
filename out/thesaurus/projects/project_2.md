@@ -1,11 +1,11 @@
-# Mini Dall-e
+# SNCF Digital Event
+*During an event between SNCF and Telecom SudParis, the website showed here had been used to challenge students about the intervention.*
 
-![Mini Dall-e](project_2.jpg)
+December 2020
 
-[Github Repository](https://www.github.com/simon-cherel)
+The source code of the project is accessible here : [Click here to access to the code.](https://github.com/simon-cherel/SNCF-Challenge)
 
-2055-11-06
+![Website preview](/project_2.jpg)
 
-*Creating and training a GAN model coupled with an NLP Clip model to generate images from texts*
 
-The GAN is a type of model which is made of a creative model and a discrimator model.
+See more detail later
