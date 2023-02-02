@@ -15,6 +15,7 @@ export default function ProjectGrid() {
     }
     fetchData();
   },[]);
+  
 
   const Card = (project:any) => (
     <Link href={"/projects/"+project.project.numb} className='pcard'>
@@ -39,10 +40,11 @@ export default function ProjectGrid() {
   
   );
 
+  
   return (
     <div className={state.projects!==undefined?Object.keys(state.projects).length<4?'pgrid'+Object.keys(state.projects).length.toString():'pgrid':'pgrid'}>
 
-{ state.projects!==undefined?Object.keys(state.projects).length!==0?Object.keys(state?.projects).map((project,i) =>(
+{ state.projects!==undefined?Object.keys(state.projects).length!==0?Object.keys(state?.projects).sort().reverse().map((project,i) =>(
                 <Card key={i} project={state?.projects[project]}/>)):<EmptyCard/>:<EmptyCard/>}
 
 

@@ -18,12 +18,13 @@ function main(callback_main) {
         callback_run(result);
     }else{
     while ((item = theme.readSync()) !== null) {
+      let first=true;
       let description = "";
       let title = "";
       let hour = "";
       let img = "";
       let _item = item;
-      let numb;
+      let numb=_item.name.slice(-4).charAt(0);
       const data_stream =readline.createInterface({
         input:
           theme_name == "projects"
@@ -34,7 +35,7 @@ function main(callback_main) {
       });
       data_stream.on("line", (line) => {
         
-        if (line.includes("#")) {
+        if (line.includes("#") && !(line.includes("###")) && !(line.includes("##"))) {
           let letter;
           for (letter of line) {
             if (letter != "#") {
@@ -53,7 +54,7 @@ function main(callback_main) {
           for (letter of line) {
             hour += letter;
           }
-        }else if (line.includes("![")) {
+        }else if (line.includes("![") && first) {
           let letter;
           let path=false;
           for (letter of line) {
@@ -66,8 +67,8 @@ function main(callback_main) {
             else if(path){
               img += letter;
             }
-            numb=img.slice(-5).charAt(0)
           }
+          first=false;
         }
         const array = {"numb":numb,"title": title, "description": description, "hour": hour, "img":img };
         result[_item.name] = array;
@@ -92,6 +93,8 @@ if (err) throw err;
 });
 }
 
+
 main((json) => {
+
   writteFile(json)
 });

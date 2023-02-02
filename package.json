@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "json":"rm public/tree.json ; node script.js",
+    "json": "rm public/tree.json ; node script.js",
     "dev": "next dev",
     "build": "rm public/tree.json ; node script.js && next build",
     "start": "next start",
@@ -12,6 +12,7 @@
     "deploy": "rm public/tree.json ; node script.js && next build && next export && git add -A && git commit -m \"Deploy portfolio on remote gh-pages by the branch deploy\" && git subtree push --prefix out gh-pages deploy"
   },
   "dependencies": {
+    "@agentofuser/remark-oembed": "^1.0.4",
     "@react-three/drei": "^9.48.1",
     "@react-three/fiber": "^8.9.1",
     "@types/node": "18.11.18",

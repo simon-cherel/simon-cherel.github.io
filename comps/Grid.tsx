@@ -42,7 +42,7 @@ export default function Grid() {
   return (
     <div className='grid'>
 
-{ state.projects!==undefined?Object.keys(state.projects).length!==0?Object.keys(state?.projects).map((project,i) =>(
+{ state.projects!==undefined?Object.keys(state.projects).length!==0?Object.keys(state?.projects).sort().reverse().map((project,i) =>(
                 <Card key={i} project={state?.projects[project]}/>)):<EmptyCard/>:<EmptyCard/>}
 
          

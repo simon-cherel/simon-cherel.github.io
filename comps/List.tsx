@@ -37,7 +37,7 @@ export default function List() {
 
 {
 state.writtings!==undefined
-? Object.keys(state.writtings).length!==0?Object.keys(state?.writtings).map((writting,i) =>(
+? Object.keys(state.writtings).length!==0?Object.keys(state?.writtings).sort().reverse().map((writting,i) =>(
                 <Listed key={i} writting={state?.writtings[writting]}/>)):<EmptyListed/>:<EmptyListed/>}
 
           <li>
