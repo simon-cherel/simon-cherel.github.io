@@ -6,14 +6,13 @@ export default function Layout({children}:{children:any}) {
   return (
     <>
     <Head>
-    
         <title>Simon&apos;s portfolio</title> 
         <meta name="description" content="Simon CHEREL's portfolio" />
-        <link rel="icon" href={"/"+"./peacock_wh.png"} />
+        <link rel="icon" href="/peacock_wh.ico" />
       </Head>
     <Header/>
-    <div className='container' style={{ display: "block" }}>
-    
+    <div className='container'>
+      
       <main className='main'>
       
     {children}

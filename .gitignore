@@ -9,25 +9,11 @@
 /coverage
 
 # next.js
-.next
-.next/
-.next/*
-.next/cache
-.next/cache/
-.next/cache/*
-.next/cache/webpack
-.next/cache/webpack/
-.next/cache/webpack/*
-.next/cache/webpack/client-development
-.next/cache/webpack/client-development/
-.next/cache/webpack/client-development/*
-.next/cache/webpack/server-development
-.next/cache/webpack/server-development/
-.next/cache/webpack/server-development/*
+
 
 # production
-out
-out/*
+
+
 # misc
 .DS_Store
 *.pem
@@ -47,6 +33,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# yarn
-yarn.lock

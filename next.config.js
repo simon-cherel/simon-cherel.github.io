@@ -3,20 +3,12 @@
 //   reactStrictMode: true,
 //   swcMinify: true,
 // }
+const isProd = process.env.NODE_ENV === 'production'
 const nextConfig   = {
-  experimental: {
-    css: false,
-  },
+  assetPrefix: isProd ? '/simon-cherel/' : './',
   images: {
-    
     unoptimized: true,
   },
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-
-    return config;
-  },
-}
+};
 
 module.exports = nextConfig

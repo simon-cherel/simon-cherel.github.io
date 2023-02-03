@@ -15,6 +15,7 @@ export default function Header() {
       // setTheme(userTheme)
     }
     fetchData();
+    console.log(theme)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
@@ -36,7 +37,7 @@ export default function Header() {
     <Link href="/" >
     <div className="homeButton">
     <div className='logo'>
-      <Image src={"/"+"./peacock_wh.png"} alt="page logo" width={32} height={32}/>
+      <Image src="/peacock_wh.png" alt="page logo" width={32} height={32}/>
     </div>
     <span>Portfolio</span>
     </div>
@@ -51,7 +52,7 @@ export default function Header() {
     <Link onClick={()=>{if(menu){setMenu(!menu)}}} href="/writtings">Writtings</Link>
     </div>
     <button className='theme' id={theme?"sun":"moon"} onClick={()=>{setTheme(!theme)}}>
-      <Image src={theme?"/"+"./sun.png":"/"+"./moon.png"} alt="page logo" width={32} height={32}/>
+      <Image src={theme?"/sun.png":"/moon.png"} alt="page logo" width={32} height={32}/>
     </button>
     <button className={menu?'module_open':'module'} onClick={()=>{setMenu(!menu)}}>
       <span></span>
