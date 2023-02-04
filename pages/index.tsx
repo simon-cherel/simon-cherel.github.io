@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
       <>
-        <h1>
+        <h1 id="name">
           Simon Cherel
         </h1>
         <p className='subtitle'>

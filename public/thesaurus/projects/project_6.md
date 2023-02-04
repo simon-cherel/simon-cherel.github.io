@@ -14,7 +14,8 @@ Our goal with this project was to develop a machine learning model that could ge
 ### Mini DALL-E model
 The idea of Mini DALL-E is to create a model that encodes texts into a latent space and decode image from this latent space. At the end, the model uses the CLIP model to choose the best image corresponding to the text input.
 To succeed, the Mini DALL-E team use the BART encoder and decoder to process the input text. For the image part, they used a VQ-GAN encoder and decoder. 
-A GAN, also called a generative adversarial netwok is a model which is composed of two CNN, the first CNN is called a generator and 
+A GAN, also called a generative adversarial netwok is a model which is composed of two CNN, the first CNN is called a generator and the second is called a discrimnator. The idea behind it is that the generator creates an image from some noise and the discriminator tells if the image created characteristics correspond to the input requirements.
+In the case of Mini DALL-E, the model being a VQ-GAN, the generator is not a simple CNN but is specific model called a VQ-AE (Vector Quantised Variational AutoEncoder). An autoencoder is a model that has been created to upgrade the image quality while downgrading the image information. To do so, the model is composed of three elements, the CNN encoder, the latent space and the CNN decoder. The idea is that the latent space has a limited size, which forces the encoder to reduce the information from the input image and forces the decoder to extrapolate some information to produice the output image. This mechanism helps to reduced noise in picktures for example. The quantatization aspect here is the fact the latent space is discretized in a codebook composed of specific vectors. In practice, input latent space images are projected into the codebook space.
 
 ### VQ-GAN + CLIP
 
