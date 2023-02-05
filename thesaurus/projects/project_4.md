@@ -7,7 +7,7 @@ The application haven't been release. A video demo have been recorded : [Click h
 
 ![Mulmul logo](/project_4.jpg)
 
-## The project
+## Project
 The idea behind this project was to design a platform application of the customer of the Mulmul startup.
 The Mulmul startup helps customers to connect and interact with their local artisans.
 The application is composed of an authentication system, a presentation page composed of a map, a messenger service, a QR code to get reduction form artisans and a presentation page for every shop.

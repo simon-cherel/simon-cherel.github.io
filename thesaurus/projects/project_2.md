@@ -1,5 +1,5 @@
 # SNCF Digital Event
-*During an event between SNCF and Telecom SudParis, the website showed here had been used to challenge students about the intervention.*
+*A website to challenge students.*
 
 December 2020
 
@@ -7,5 +7,8 @@ The source code of the project is accessible here : [Click here to access to the
 
 ![Website preview](/project_2.jpg)
 
+## Project
+For an event between SNCF and Telecom SudParis, we wanted to challenge students about the intervention. In order, to make it playful, we design a game made of questions.
 
-See more detail later
+## Technology used
+To create this website, I simply used the PHP technology without frameworks. In terms of CSS, I used the Bootstrap framework.
