@@ -11,6 +11,7 @@ The source code of the project is accessible here : [Colab notebook](https://col
 
 
 ## Inspirations
+
 Our goal with this project was to develop a machine learning model that could generate images based on text descriptions, similar to how OpenAI's DALL-E works. This project being complicated, we search for a simpler alternative. We found a project called mini DALL-E, which is open source and presents a way to generate image from texts. Finally, the model requiring a huge amount of computation power, we focused on a simpler approach called VQ-GAN+CLIP.
 
 ### Mini DALL-E model
@@ -37,6 +38,7 @@ To train this model, the Mini DALL-E team used image labeled dataset. For each e
 To produce the expected results, the Mini DALL-E team takes the input text, feeds the BART model with it and then feeds the VQ-GAN decoder with the BART output to produce the picture.
 
 ## VQ-GAN + CLIP
+
 Thanks to this introduction of the state of the art, you pretty know everything we used in our project.
 Our means being limited, we tried to find a simpler model than Mini DALL-E. We found that some people tried to generate image from text with a model called VQ-GAN CLIP ([see the research paper here](https://arxiv.org/abs/2204.08583)).
 The simple idea behind this model is to generate images from a VQ-GAN, but the specificity of this VQ-GAN is that the discriminator CNN is replaced by the CLIP model.
@@ -53,5 +55,6 @@ To produce our model, we mainly used Tensorflow ([see the GAN model here](https:
 At this period of time, we didn't find an equivalent model on Tensorflow, so we tried to build one ourselves. To succeed, we used a keras model called Xception to encode images and we used the BERT ([see the research paper here](https://arxiv.org/abs/1810.04805)) model to encore texts, then we calculated the similarities with the two outputs thanks to cross entropy and matrix multiplication functions.
 
 ## Complements
+
 If the topic interests you, there is a great article that explains a bit further what I shorted here. You can access it here : [click here to access the article](https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/).
 
