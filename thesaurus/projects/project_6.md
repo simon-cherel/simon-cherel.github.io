@@ -3,7 +3,7 @@
 
 January 2022
 
-Special thanks to [Capucine Viougeat](cviougeat.github.io) for the long hours of work together and special thanks to [Hossam Afifi](http://www-public.int-evry.fr/~afifi/) for introduction to ML course.
+Special thanks to [Capucine Viougeat](https://cviougeat.github.io) for the long hours of work together and special thanks to [Hossam Afifi](http://www-public.int-evry.fr/~afifi/) for introduction to ML course.
 
 The source code of the project is accessible here : [Colab notebook](https://colab.research.google.com/drive/1s1L8Myrl24q40SB87AP0Bp-iCDhhlzPP?usp=sharing). Be carefull, it takes a lot of time to compute and run.
 
