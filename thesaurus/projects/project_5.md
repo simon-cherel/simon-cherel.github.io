@@ -1,7 +1,7 @@
 # Corner Tech Application
 *The Corner Tech Forum's 2021-22 guest application.*
 
-November 2021
+October 2021
 
 The application can be downloaded and tested directly from the Play Store. [Click here to access to the Play store page.](https://play.google.com/store/apps/details?id=forumdestelecommunications.fr)
 

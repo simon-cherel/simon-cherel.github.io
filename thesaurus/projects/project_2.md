@@ -1,7 +1,7 @@
 # SNCF Digital Event
 *A website to challenge students.*
 
-December 2020
+November 2020
 
 The source code of the project is accessible here : [Click here to access to the code.](https://github.com/simon-cherel/SNCF-Challenge)
 
